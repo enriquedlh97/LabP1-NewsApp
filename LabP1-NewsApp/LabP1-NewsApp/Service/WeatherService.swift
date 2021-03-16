@@ -5,6 +5,18 @@
 //
 
 import Foundation
+// Allows to get the user's location
+import CoreLocation
+
+public final class WeatherService: NSObject {
+    
+    private let locationManager = CLLocationManager()
+    // Holds API key
+    private let API_KEY = "d5faca9c480c18a071c41c9ca3b6a02a"
+    // Completion handler to be excecuted when data is gotten
+    private var completionHandler: (() -> Void)?
+}
+
 
 //These 3 structures represent the JSON response from the API
 
