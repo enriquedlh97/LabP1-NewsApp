@@ -18,6 +18,10 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
     
     private let service: NewsService
     
+    // (set) allows the variable to be protected but still accesable within the class
+    // This array holds the news articles
+    private(set) var articles = [Article]()
+    
     // Injected news service into the class (basic start of the request).
     // Essentially a Dependency injection
     init(service: NewsService) {
