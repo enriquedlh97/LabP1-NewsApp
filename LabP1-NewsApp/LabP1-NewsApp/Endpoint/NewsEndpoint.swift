@@ -18,10 +18,13 @@ enum  NewsAPI {
 }
 
 extension NewsAPI: APIBuilder {
+    
+    // Generates path to call the API (Endpoint)
     var urlRequest: URLRequest {
-        <#code#>
+        return URLRequest(url: self.baseUrl.appendingPathComponent(self.path))
     }
     
+    // API base url webstie
     var baseUrl: URL {
         switch self {
         case .getNews:
@@ -29,6 +32,7 @@ extension NewsAPI: APIBuilder {
         }
     }
     
+    // API resource path to be accesed
     var path: String {
         return "/news"
     }
