@@ -12,3 +12,7 @@ protocol APIBuilder {
     var baseUrl: URL { get }
     var path: String { get }
 }
+
+enum  NewsAPI {
+    case getNews
+}
