@@ -14,3 +14,17 @@ enum APIError {
     // Handles any other error
     case unknown
 }
+
+// Adds description to the errors above as an extension
+extension APIError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .decodingError:
+            return "Service object decoding was unsuccessful"
+        case .errorCode(let code):
+            return "\(code): Error"
+        case .unknown:
+            return "Uknown error"
+        }
+    }
+}
