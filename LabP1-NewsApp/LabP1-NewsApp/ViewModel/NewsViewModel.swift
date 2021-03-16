@@ -24,6 +24,10 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
     // Will hold the requestsin memory to avoid getting disposed of the service when calling it
     private var cancellables = Set<AnyCancellable>()
     
+    // Uses enum with result states to push the current state to the front end. The default value is ".loading"
+    // "@Published" Allows to listen when the variable "state" changes.
+    @Published private(set) var state: ResultState = .loading
+    
     // Injected news service into the class (basic start of the request).
     // Essentially a Dependency injection
     init(service: NewsService) {
