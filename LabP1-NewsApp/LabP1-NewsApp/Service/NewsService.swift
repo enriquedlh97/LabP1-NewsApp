@@ -28,7 +28,10 @@ struct  NewsServiceImpl: NewsService {
             .mapError { _ in APIError.unknown}
             // Mange data from response
             .flatMap { data, response -> AnyPublisher<NewsResponse, APIError> in
-                
+                // Check if the response was valid
+                guard let response = response as? HTTPURLResponse else {
+                    return Fail(error: APIError.unknown).eraseToAnyPublisher()
+                }
             }
             .eraseToAnyPublisher()
     }
