@@ -59,5 +59,7 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
                 // array
                 self.articles = response.articles
             }
+        // Inserts it ito set to be held in memory
+        self.cancellables.insert(cancellable)
     }
 }
