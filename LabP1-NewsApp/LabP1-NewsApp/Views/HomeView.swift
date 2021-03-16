@@ -13,12 +13,13 @@ struct HomeView: View {
     var body: some View {
         Group {
             
-            // Observe states
+            // Observe states and display appropiate value
             switch viewModel.state {
             case .loading:
                 ProgressView()
             case .failed(let error):
-                ErrorView(error: error, handler: viewModel.getArticles)
+                ErrorView(error: error,
+                          handler: viewModel.getArticles)
             case .success(let articles):
                 NavigationView {
                     List(articles) { item in
