@@ -9,6 +9,7 @@ import SwiftUI
 struct HomeView: View {
     
     var body: some View {
+        TabView {
         FeedView()
             .tabItem {
                 Image(systemName: "newspaper")
@@ -19,6 +20,7 @@ struct HomeView: View {
                 Image(systemName: "cloud.sun")
                 Text("Weather")
             }
+        }
     }
 }
 
