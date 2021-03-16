@@ -32,6 +32,15 @@ struct  NewsServiceImpl: NewsService {
                 guard let response = response as? HTTPURLResponse else {
                     return Fail(error: APIError.unknown).eraseToAnyPublisher()
                 }
+                
+                // This runs if the response was valid
+                // Check if the response falls within the valid codes
+                // If it is valid we call the object. If it is not valid we send back an error
+                if (200...299).contains(response.statusCode) {
+                    
+                } else {
+                    
+                }
             }
             .eraseToAnyPublisher()
     }
