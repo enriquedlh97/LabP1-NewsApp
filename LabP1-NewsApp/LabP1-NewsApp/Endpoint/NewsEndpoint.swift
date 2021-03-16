@@ -16,3 +16,22 @@ protocol APIBuilder {
 enum  NewsAPI {
     case getNews
 }
+
+extension NewsAPI: APIBuilder {
+    var urlRequest: URLRequest {
+        <#code#>
+    }
+    
+    var baseUrl: URL {
+        switch self {
+        case .getNews:
+            return URL(string: "https://api.lil.software")!
+        }
+    }
+    
+    var path: String {
+        <#code#>
+    }
+    
+    
+}
