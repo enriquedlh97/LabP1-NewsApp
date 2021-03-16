@@ -37,6 +37,8 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
     func getArticles() {
         // Calls service to trigger API call
         
+        self.state = .loading
+        
         // Uses above created service to call the request fucntion
         let cancellable = service
             .request(from: .getNews)
@@ -47,8 +49,12 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
                 switch res {
                 case .finished:
                     // Send back the articles
-                case .failure(<#T##APIError#>):
+                    self.state = .success(content: self.articles)
+                break
+                case .failure(let error):
                     // Send back the errors
+                    self.state = .failed(error: error)
+                break
                 }
             } receiveValue: { (response) in
                 // When the value from the request is gotten then we have to put the articles in the articles
