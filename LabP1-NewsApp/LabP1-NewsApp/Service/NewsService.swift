@@ -44,6 +44,7 @@ struct  NewsServiceImpl: NewsService {
                     return Just(data)
                         // We use jsonDecoder because the JSONDecoder has a date decoding property we need to use for the date
                         .decode(type: NewsResponse.self, decoder: jsonDecoder)
+                        // Thorws error if previous block fails
                         .mapError { _ in APIError.decodingError }
                         .eraseToAnyPublisher()
                 } else {
