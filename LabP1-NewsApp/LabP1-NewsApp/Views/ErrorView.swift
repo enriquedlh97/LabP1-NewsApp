@@ -7,6 +7,9 @@
 import SwiftUI
 
 struct ErrorView: View {
+    
+    let error: Error
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -14,6 +17,6 @@ struct ErrorView: View {
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView()
+        ErrorView(error: APIError.decodingError)
     }
 }
