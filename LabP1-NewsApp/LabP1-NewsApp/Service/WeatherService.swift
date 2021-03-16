@@ -22,13 +22,27 @@ public final class WeatherService: NSObject {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
+    
+    // Gets weather data for above gotten location
+    private func makeDataRequest(forCoordinates coordinates: CLLocationCoordinate2D) {
+        guard let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&appid=\(API_KEY)&units=metric".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard error == nil, let data = data else { return }
+            // Decod data if previous block successful
+            if let response = try? JSONDecoder().decode(APIResponse.self, from: data) {
+                self.completionHandler?(Weather(response: response))
+            }
+        }.resume()
+    }
 }
 
 
 //These 3 structures represent the JSON response from the API
 
 // Struct to represent the complete reponse of the API
-struct APIResponse {
+struct APIResponse: Decodable {
     // Saves gthe name of the city we are getting the weather for
     let name: String
     let main: APIMain
