@@ -8,6 +8,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    // Use system to open links
+    @Environment(\.openURL) var openURL
     @StateObject var viewModel = NewsViewModelImpl(service: NewsServiceImpl())
     
     var body: some View {
@@ -24,12 +26,24 @@ struct HomeView: View {
                 NavigationView {
                     List(articles) { item in
                         ArticleView(article: item)
+                            .onTapGesture {
+                                load(url: item.url)
+                            }
                     }
                     .navigationTitle(Text("News"))
                 }
             }
             
         }.onAppear(perform: viewModel.getArticles) // Automatically calls for articles fucntion
+    }
+    
+    func load(url: String?) {
+        
+        guard let link = url,
+              let url = URL(string: link) else { return }
+        
+        openURL(url)
+        
     }
 }
 
