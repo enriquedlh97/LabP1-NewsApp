@@ -24,6 +24,17 @@ struct ErrorView: View {
                 .font(.system(size: 15))
                 .multilineTextAlignment(.center)
                 .padding(.vertical, 4)
+            Button(action: {
+                
+            }, label: {
+                Text("Try again")
+            })
+            .padding(.vertical, 12)
+            .padding(.horizontal, 30)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .font(.system(size: 15, weight: .heavy))
+            .cornerRadius(10)
         }
     }
 }
