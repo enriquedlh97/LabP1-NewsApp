@@ -13,6 +13,7 @@ struct HomeView: View {
     @StateObject var viewModel = NewsViewModelImpl(service: NewsServiceImpl())
     
     var body: some View {
+        NavigationView {
         Group {
             
             // Observe states and display appropiate value
@@ -23,7 +24,7 @@ struct HomeView: View {
                 ErrorView(error: error,
                           handler: viewModel.getArticles)
             case .success(let articles):
-                NavigationView {
+                
                     List(articles) { item in
                         ArticleView(article: item)
                             .onTapGesture {
@@ -31,10 +32,12 @@ struct HomeView: View {
                             }
                     }
                     .navigationTitle(Text("News"))
-                }
+                
             }
+        }
             
         }.onAppear(perform: viewModel.getArticles) // Automatically calls for articles fucntion
+    
     }
     
     func load(url: String?) {
