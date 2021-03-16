@@ -23,7 +23,7 @@ struct ArticleView: View {
                             cachePolicy:
                                 .returnCacheElseLoad(cacheDelay: nil, downloadDelay: 0.25)
                          ),
-                         failuer: { error, _ in
+                         failure: { error, _ in
                             Image(systemName: "photo.fill")
                                 .foregroundColor(.white)
                                 .background(Color.gray)
