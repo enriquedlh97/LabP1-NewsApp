@@ -40,7 +40,7 @@ public class WeatherViewModel: ObservableObject {
                 self.cityName = weather.city
                 self.temperature = "\(weather.temperature)°C"
                 self.weatherDescription = weather.description.capitalized
-                self.weatherIcon = iconMap[weather.iconName] ?? defaultIcon
+                self.weatherIcon = iconMap[weather.iconName] ?? defaultIcon // SHow defaultIcon if icon is not in iconMap
             }
         }
     }
