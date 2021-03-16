@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		5384F818260062DC002AC0D4 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384F817260062DC002AC0D4 /* NewsService.swift */; };
 		5384F81C260068B3002AC0D4 /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384F81B260068B3002AC0D4 /* ResultState.swift */; };
 		5384F82026006981002AC0D4 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384F81F26006980002AC0D4 /* NewsViewModel.swift */; };
+		5384F82526007167002AC0D4 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5384F82426007167002AC0D4 /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5384F82526007167002AC0D4 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +161,9 @@
 			dependencies = (
 			);
 			name = "LabP1-NewsApp";
+			packageProductDependencies = (
+				5384F82426007167002AC0D4 /* URLImage */,
+			);
 			productName = "LabP1-NewsApp";
 			productReference = 5384F7F1260057CA002AC0D4 /* LabP1-NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +191,9 @@
 				Base,
 			);
 			mainGroup = 5384F7E8260057CA002AC0D4;
+			packageReferences = (
+				5384F82326007167002AC0D4 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 5384F7F2260057CA002AC0D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -408,6 +416,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5384F82326007167002AC0D4 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5384F82426007167002AC0D4 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5384F82326007167002AC0D4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5384F7E9260057CA002AC0D4 /* Project object */;
 }
