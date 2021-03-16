@@ -47,6 +47,8 @@ struct  NewsServiceImpl: NewsService {
                         // Thorws error if previous block fails
                         .mapError { _ in APIError.decodingError }
                         .eraseToAnyPublisher()
+                    
+                    
                 } else {
                     // Returns error with code gotten from the status code
                     return Fail(error: APIError.errorCode(response.statusCode)).eraseToAnyPublisher()
