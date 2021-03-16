@@ -8,7 +8,18 @@ import SwiftUI
 
 struct WeatherView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Los Angeles")
+                .font(.largeTitle)
+                .padding()
+            Text("25°C")
+                .font(.system(size: 70))
+                .bold()
+            Text("⛅️")
+                .font(.largeTitle)
+                .padding()
+            Text("Clear Sky")
+        }
     }
 }
 
