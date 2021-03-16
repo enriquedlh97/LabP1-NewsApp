@@ -9,7 +9,16 @@ import SwiftUI
 struct HomeView: View {
     
     var body: some View {
-        Text("Hello")
+        FeedView()
+            .tabItem {
+                Image(systemName: "newspaper")
+                Text("Feed")
+            }
+        WeatherView()
+            .tabItem {
+                Image(systemName: "cloud.sun")
+                Text("Weather")
+            }
     }
 }
 
