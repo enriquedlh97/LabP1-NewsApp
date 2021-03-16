@@ -24,10 +24,7 @@ struct ArticleView: View {
                                 .returnCacheElseLoad(cacheDelay: nil, downloadDelay: 0.25)
                          ),
                          failure: { error, _ in
-                            Image(systemName: "photo.fill")
-                                .foregroundColor(.white)
-                                .background(Color.gray)
-                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                            PlaceHolderImageView()
                          },
                          content: { image in
                             image
@@ -39,9 +36,20 @@ struct ArticleView: View {
                 // Build asynchronous image object
             } else {
                 
+                PlaceHolderImageView()
             }
             
         }
+    }
+}
+
+struct PlaceHolderImageView: View {
+    
+    var body: some View {
+        Image(systemName: "photo.fill")
+            .foregroundColor(.white)
+            .background(Color.gray)
+            .frame(width: 100, height: 100)
     }
 }
 
