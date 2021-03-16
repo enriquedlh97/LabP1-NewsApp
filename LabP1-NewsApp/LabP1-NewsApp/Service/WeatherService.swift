@@ -13,8 +13,15 @@ public final class WeatherService: NSObject {
     private let locationManager = CLLocationManager()
     // Holds API key
     private let API_KEY = "d5faca9c480c18a071c41c9ca3b6a02a"
-    // Completion handler to be excecuted when data is gotten
-    private var completionHandler: (() -> Void)?
+    // Completion handler to be excecuted when data is gotten. Provides Weathe robject when the function is called
+    private var completionHandler: ((Weather) -> Void)?
+    
+    // Gets user location
+    public func loadWeatherData(_ completionHandler: @escaping((Weather) -> Void)) {
+        self.completionHandler = completionHandler
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
 }
 
 
