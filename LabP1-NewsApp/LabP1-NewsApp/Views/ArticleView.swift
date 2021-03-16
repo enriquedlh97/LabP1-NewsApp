@@ -34,6 +34,8 @@ struct ArticleView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                          })
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(10)
                 // Build asynchronous image object
             } else {
                 
