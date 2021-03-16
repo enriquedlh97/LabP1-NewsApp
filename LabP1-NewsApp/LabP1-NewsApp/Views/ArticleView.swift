@@ -35,10 +35,16 @@ struct ArticleView: View {
                     .cornerRadius(10)
                 // Build asynchronous image object
             } else {
-                
                 PlaceHolderImageView()
             }
-            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(article.title ?? "")
+                    .foregroundColor(.black)
+                    .font(.system(size: 18, weight: .semibold))
+                Text(article.source ?? "N/A")
+                    .foregroundColor(.gray)
+                    .font(.footnote)
+            }
         }
     }
 }
