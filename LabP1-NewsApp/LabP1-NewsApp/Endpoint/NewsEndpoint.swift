@@ -30,7 +30,7 @@ extension NewsAPI: APIBuilder {
     }
     
     var path: String {
-        <#code#>
+        return "/news"
     }
     
     
