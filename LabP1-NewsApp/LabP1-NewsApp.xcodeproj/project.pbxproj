@@ -12,6 +12,7 @@
 		5384F7FC260057CB002AC0D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5384F7FB260057CB002AC0D4 /* Preview Assets.xcassets */; };
 		5384F80626005AD3002AC0D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384F80526005AD3002AC0D4 /* HomeView.swift */; };
 		5384F80C26005C98002AC0D4 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384F80B26005C98002AC0D4 /* NewsResponse.swift */; };
+		5384F81026005E2B002AC0D4 /* NewsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384F80F26005E2B002AC0D4 /* NewsEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5384F7FD260057CB002AC0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5384F80526005AD3002AC0D4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5384F80B26005C98002AC0D4 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		5384F80F26005E2B002AC0D4 /* NewsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		5384F7F3260057CA002AC0D4 /* LabP1-NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				5384F80E26005E02002AC0D4 /* Endpoint */,
 				5384F80A26005C7C002AC0D4 /* Model */,
 				5384F80426005AB3002AC0D4 /* Views */,
 				5384F7F4260057CA002AC0D4 /* LabP1_NewsAppApp.swift */,
@@ -86,6 +89,14 @@
 				5384F80B26005C98002AC0D4 /* NewsResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5384F80E26005E02002AC0D4 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				5384F80F26005E2B002AC0D4 /* NewsEndpoint.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				5384F80626005AD3002AC0D4 /* HomeView.swift in Sources */,
 				5384F7F5260057CA002AC0D4 /* LabP1_NewsAppApp.swift in Sources */,
 				5384F80C26005C98002AC0D4 /* NewsResponse.swift in Sources */,
+				5384F81026005E2B002AC0D4 /* NewsEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
