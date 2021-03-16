@@ -24,6 +24,7 @@
 		53AA73E2260169D200154570 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73E1260169D200154570 /* WeatherView.swift */; };
 		53AA73E526016D6A00154570 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73E426016D6A00154570 /* WeatherService.swift */; };
 		53AA73E8260171E800154570 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73E7260171E800154570 /* Weather.swift */; };
+		53AA73EB260179F300154570 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73EA260179F300154570 /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		53AA73E1260169D200154570 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		53AA73E426016D6A00154570 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		53AA73E7260171E800154570 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		53AA73EA260179F300154570 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				5384F81F26006980002AC0D4 /* NewsViewModel.swift */,
+				53AA73EA260179F300154570 /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				5384F82B260079C9002AC0D4 /* ErrorView.swift in Sources */,
 				53AA73DF260169C100154570 /* FeedView.swift in Sources */,
 				5384F8142600610F002AC0D4 /* APIError.swift in Sources */,
+				53AA73EB260179F300154570 /* WeatherViewModel.swift in Sources */,
 				5384F81026005E2B002AC0D4 /* NewsEndpoint.swift in Sources */,
 				5384F82826007209002AC0D4 /* ArticleView.swift in Sources */,
 				5384F82026006981002AC0D4 /* NewsViewModel.swift in Sources */,
