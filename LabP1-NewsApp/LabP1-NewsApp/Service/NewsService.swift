@@ -37,9 +37,11 @@ struct  NewsServiceImpl: NewsService {
                 // Check if the response falls within the valid codes
                 // If it is valid we call the object. If it is not valid we send back an error
                 if (200...299).contains(response.statusCode) {
+                    // Decode object
                     
                 } else {
-                    
+                    // Returns error with code gotten from the status code
+                    return Fail(error: APIError.errorCode(response.statusCode)).eraseToAnyPublisher()
                 }
             }
             .eraseToAnyPublisher()
