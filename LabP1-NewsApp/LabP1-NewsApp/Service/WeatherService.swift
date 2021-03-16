@@ -16,6 +16,11 @@ public final class WeatherService: NSObject {
     // Completion handler to be excecuted when data is gotten. Provides Weathe robject when the function is called
     private var completionHandler: ((Weather) -> Void)?
     
+    public override init() {
+        super.init()
+        locationManager.delegate = self
+    }
+    
     // Gets user location
     public func loadWeatherData(_ completionHandler: @escaping((Weather) -> Void)) {
         self.completionHandler = completionHandler
@@ -25,6 +30,7 @@ public final class WeatherService: NSObject {
     
     // Gets weather data for above gotten location
     private func makeDataRequest(forCoordinates coordinates: CLLocationCoordinate2D) {
+        // Send request to OpenWeather map
         guard let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&appid=\(API_KEY)&units=metric".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
         guard let url = URL(string: urlString) else { return }
         
@@ -38,6 +44,27 @@ public final class WeatherService: NSObject {
     }
 }
 
+// CLLocation Manager delegate implementation
+extension WeatherService: CLLocationManagerDelegate {
+    // Method called when user location is updated
+    public func locationManager(
+        _ manager: CLLocationManager,
+        didUpdateLocations locations: [CLLocation]
+    ) {
+        // Here ge try to get the first location in the locations array. If gotten then a request is sent with makeDataRequest method
+        guard  let location = locations.first else { return }
+        // Makes API request
+        makeDataRequest(forCoordinates: location.coordinate)
+    }
+    
+    // Handles for errors
+    public func locationManager(
+        _ manager: CLLocationManager,
+        didFailWithError error: Error
+    ) {
+        print("Something went wrong: \(error.localizedDescription)")
+    }
+}
 
 //These 3 structures represent the JSON response from the API
 
