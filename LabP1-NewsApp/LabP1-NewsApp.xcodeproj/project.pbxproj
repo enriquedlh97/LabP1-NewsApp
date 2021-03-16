@@ -23,6 +23,7 @@
 		53AA73DF260169C100154570 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73DE260169C100154570 /* FeedView.swift */; };
 		53AA73E2260169D200154570 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73E1260169D200154570 /* WeatherView.swift */; };
 		53AA73E526016D6A00154570 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73E426016D6A00154570 /* WeatherService.swift */; };
+		53AA73E8260171E800154570 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA73E7260171E800154570 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		53AA73DE260169C100154570 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		53AA73E1260169D200154570 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		53AA73E426016D6A00154570 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		53AA73E7260171E800154570 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				5384F80B26005C98002AC0D4 /* NewsResponse.swift */,
+				53AA73E7260171E800154570 /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				53AA73E2260169D200154570 /* WeatherView.swift in Sources */,
 				5384F7F5260057CA002AC0D4 /* LabP1_NewsAppApp.swift in Sources */,
 				5384F80C26005C98002AC0D4 /* NewsResponse.swift in Sources */,
+				53AA73E8260171E800154570 /* Weather.swift in Sources */,
 				5384F82B260079C9002AC0D4 /* ErrorView.swift in Sources */,
 				53AA73DF260169C100154570 /* FeedView.swift in Sources */,
 				5384F8142600610F002AC0D4 /* APIError.swift in Sources */,
