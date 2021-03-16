@@ -50,11 +50,9 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
                 case .finished:
                     // Send back the articles
                     self.state = .success(content: self.articles)
-                break
                 case .failure(let error):
                     // Send back the errors
                     self.state = .failed(error: error)
-                break
                 }
             } receiveValue: { (response) in
                 // When the value from the request is gotten then we have to put the articles in the articles
