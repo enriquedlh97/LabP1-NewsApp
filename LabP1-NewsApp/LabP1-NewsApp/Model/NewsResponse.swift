@@ -39,5 +39,5 @@ extension Article {
               image: "https://static.foxnews.com/foxnews.com/content/uploads/2021/02/Gina-Carano.jpg",
               date: Date())
     }
-    
+    //
 }
