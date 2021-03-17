@@ -15,6 +15,8 @@ struct HomeView: View {
                 Image(systemName: "newspaper")
                 Text("Feed")
             }
+            
+            // Provide viewModel to Weatherview which is necesary to get data to be displayed
             let weatherService = WeatherService()
             let viewModel = WeatherViewModel(weatherService: weatherService)
         WeatherView(viewModel: viewModel)
