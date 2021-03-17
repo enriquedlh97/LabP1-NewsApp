@@ -15,7 +15,9 @@ struct HomeView: View {
                 Image(systemName: "newspaper")
                 Text("Feed")
             }
-        WeatherView()
+            let weatherService = WeatherService()
+            let viewModel = WeatherViewModel(weatherService: weatherService)
+        WeatherView(viewModel: viewModel)
             .tabItem {
                 Image(systemName: "cloud.sun")
                 Text("Weather")
