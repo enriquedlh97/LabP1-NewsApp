@@ -22,12 +22,12 @@ struct WeatherView: View {
                 .font(.largeTitle)
                 .padding()
             Text(viewModel.weatherDescription)
-        }
+        }.onAppear(perform: viewModel.refresh) // Makes sure the ViewmOdel is reshreshed when the view appears
     }
 }
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherView()
+        WeatherView(viewModel: WeatherViewModel(weatherService: WeatherService))
     }
 }
