@@ -32,7 +32,7 @@ struct HomeView: View {
                             }
                     }
                     .navigationTitle(Text("News"))
-                
+                    
             }
         }
             
