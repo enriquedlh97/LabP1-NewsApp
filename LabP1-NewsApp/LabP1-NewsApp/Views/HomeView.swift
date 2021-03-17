@@ -37,7 +37,7 @@ struct HomeView: View {
         }
             
         }.onAppear(perform: viewModel.getArticles) // Automatically calls for articles fucntion
-    
+    //
     }
     
     func load(url: String?) {
