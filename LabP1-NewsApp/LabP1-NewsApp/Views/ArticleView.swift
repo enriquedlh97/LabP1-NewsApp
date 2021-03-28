@@ -31,7 +31,7 @@ struct ArticleView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                          })
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    .frame(width: 100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100)
                     .cornerRadius(10)
                 // Build asynchronous image object
             } else {
@@ -40,21 +40,29 @@ struct ArticleView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(article.title ?? "")
                     .foregroundColor(.black)
-                    .font(.system(size: 18, weight: .semibold))
+                    .font(.system(size: 16, weight: .semibold))
                 Text(article.source ?? "N/A")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.blue)
+                    
+                    //.foregroundColor(.white)
+                    //.background(Color.blue)
                     .font(.footnote)
+                    .bold()
+                    .frame(width: 100, height: 20, alignment: .leading)
+                    
                 
                 if let date = article.date {
                     HStack {
                         Text(date, style: .date)
                             .foregroundColor(.gray)
                             .font(.system(size: 12, weight: .regular))
+                        Divider().background(Color.blue)
                         Text(date, style: .time)
                             .foregroundColor(.gray)
                             .font(.system(size: 12, weight: .regular))
-                    }
+                    }.frame(height:20)
                 }
+                Divider().frame(height: 5).background(Color.blue)
             }
         }
     }

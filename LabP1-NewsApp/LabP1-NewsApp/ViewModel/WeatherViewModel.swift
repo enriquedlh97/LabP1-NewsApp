@@ -8,13 +8,14 @@ import Foundation
 
 private let defaultIcon = " ❓ "
 private let iconMap = [
-    "Drizzle" : "🌧",
-    "Thunderstorm" : "⛈",
-    "Rain": "🌧",
-    "Snow": "🌨",
-    "Clear": "☀️",
-    "Clouds": "☁️",
+    "Drizzle" : "cloud.drizzle.fill",
+    "Thunderstorm" : "cloud.bolt.rain.fill",
+    "Rain": "cloud.rain.fill",
+    "Snow": "cloud.snow.fill",
+    "Clear": "sun.max.fill",
+    "Clouds": "cloud.fill",
 ]
+
 
 // Gets data from service and converts model to the info that the view needs to be displayed in the app
 public class WeatherViewModel: ObservableObject {
