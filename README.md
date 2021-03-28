@@ -1,6 +1,8 @@
 # LabP1-NewsApp
 
-Simple app to show live news. Project 1 for lab of web apps
+Simple app to show live news. Project 1 for lab of web apps.
+
+It connects to (News API)[https://lil.software/api/] and to (Weather API)[https://openweathermap.org/] and uses [URLImage](https://openweathermap.org/) for managing the downloading of the remote images for the news articles and and caching it locally, both in memory and on disk.
 
 <p align="center">
   <img src="https://github.com/enriquedlh97/LabP1-NewsApp/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-03-28%20at%2010.09.17.png" width="200">
